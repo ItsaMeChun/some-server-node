@@ -9,11 +9,11 @@ const createError = require('http-errors');
 const errorHandleRequest = require('./middleware/errorHandleRequest');
 const connectDB = require('./services/connectDB');
 
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 const app = express();
 
-app.listen(PORT, () => {
+app.listen(port, () => {
     connectDB();
-    console.log('server is running on port ' + PORT);
+    console.log('server is running on port ' + port);
 });
